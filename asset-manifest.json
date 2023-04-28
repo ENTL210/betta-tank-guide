@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/betta-tank-guide/static/css/main.073c9b0a.css",
+    "main.js": "/betta-tank-guide/static/js/main.40a24c89.js",
+    "static/js/787.6821f1da.chunk.js": "/betta-tank-guide/static/js/787.6821f1da.chunk.js",
+    "static/media/logo.svg": "/betta-tank-guide/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/betta-tank-guide/index.html",
+    "main.073c9b0a.css.map": "/betta-tank-guide/static/css/main.073c9b0a.css.map",
+    "main.40a24c89.js.map": "/betta-tank-guide/static/js/main.40a24c89.js.map",
+    "787.6821f1da.chunk.js.map": "/betta-tank-guide/static/js/787.6821f1da.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.40a24c89.js"
+  ]
+}
