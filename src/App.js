@@ -14,7 +14,9 @@ import InfoPage from "./components/InfoPage";
 export default function App() {
     const navigate = useNavigate()
     const location = useLocation()
+    const pathname = location.pathname
     const [showInfo, setShowInfo] = useState(false)
+    console.log(location.pathname)
     return (
         <Container
             style={{
@@ -36,11 +38,11 @@ export default function App() {
             >
                 <NavigationBar showInfo={showInfo} setShowInfo={setShowInfo} />
                 <Routes>
-                    <Route path="/" element={<Navigate to="/environment" />} />
-                    <Route path="environment" element={<Environment />} />
-                    <Route path="plants" element={<Plants />} />
-                    <Route path="mates" element={<Mates />} />
-                    <Route path="care" element={<Care />} />
+                    <Route path="/" element={<Navigate to="/environment"/>} />
+                    <Route path="/environment" element={<Environment />} />
+                    <Route path="/plants" element={<Plants />} />
+                    <Route path="/mates" element={<Mates />} />
+                    <Route path="/care" element={<Care />} />
                 </Routes>
             </Wrapper>
         </Container>

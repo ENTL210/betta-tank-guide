@@ -91,6 +91,7 @@ font-family: 'Poppins';
 font-styled: normal;
 font-weight: 400;
 max-width: 450px;
+line-height: 1.4;
 text-align: leading;
 margin: -15px 0px;
 `

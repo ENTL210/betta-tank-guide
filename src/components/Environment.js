@@ -14,6 +14,7 @@ export default function Environment() {
             animate={{
                 opacity:1
             }}
+            
             transition={{ ease: "easeIn", duration: 0.5 }}
         >
             <H1 >Environment</H1>
@@ -33,7 +34,8 @@ export default function Environment() {
             betta, you must consider these factors.
             </Paragraph>
 
-            <H2 padding={"30px 0px"}></H2>
+            <H2 padding={"30px 0px"}>Water's Temperature</H2>
+
 
         </PageContainer>
     )
