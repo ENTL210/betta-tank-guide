@@ -7,7 +7,7 @@ import infoSymbol from "../images/infoSymbol.png"
 export default function NavigationBar({showInfo, setShowInfo}) {
     const navigate = useNavigate()
     const location = useLocation()
-    const [tab, setTab] = useState(location.pathname)
+    const [tab, setTab] = useState("/environment")
 
 
     return (
