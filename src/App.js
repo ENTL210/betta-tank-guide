@@ -34,7 +34,7 @@ export default function App() {
                 }}
                 transition={{ ease: "easeIn", duration: 0.5 }}
             >
-                <NavigationBar showInfo={showInfo} setShowInfo={setShowInfo} />
+                <NavigationBar showInfo={showInfo} setShowInfo={setShowInfo} pathname={location.pathname} />
                 <Routes>
                     <Route path="/" element={<Navigate to="/environment" />} />
                     <Route path="environment" element={<Environment />} />

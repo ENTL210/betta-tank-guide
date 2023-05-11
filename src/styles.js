@@ -7,35 +7,37 @@ min-height: 100vh;
 display: flex;
 align-items: center;
 justify-content: center;
-user-select: none;
 `
 
 const Wrapper = styled(motion.div)`
-min-height: 100%
-background: rgb(1,1,59, 0.5);
+min-height: 100vh;
 width: 100%;
-backdrop-filter: blur(2px);
+background-color: rgb(1,1,59, 0.2);
+backdrop-filter: blur(10px);
 display: grid;
-grid-template-rows: 1fr repeat(3, 2fr);
+grid-template-rows: 0.4fr repeat(3, 2fr);
 grid-template-columns: repeat(8, 1fr);
+margin: 0;
+padding: 10px;
 `
 
 const NavbarWrapper = styled.div`
-background-color: rgb(77,77,77, 0.56);
+background-color: rgb(77,77,77, 0.80);
 border-radius: 20px;
 grid-row: 1 / span 1;
 grid-column: 2 / span 6;
+padding: 5px;
 margin: 36px;
-padding: 10px;
 display: flex;
 align-items: center; 
 justify-content: space-evenly;
+user-select: none;
 `
 const NavbarTab = styled(motion.button)`
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;
-font-size: 1.5vw;
+font-size: max(12px, 1.5vw);
 color: #FFFF;
 text-decoration: none;
 background: none;
@@ -54,15 +56,16 @@ padding: 10px 0px;
 display: flex;
 flex-direction: column;
 align-items: flex-start;
+flex-wrap: wrap;
 justify-content: flex-start;
-gap: 0px
+gap: 0px;
 `
 
 const H1 = styled.h1`
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;
-font-size: 3vw;
+font-size: max(30px, 3vw);
 line-height: 1.2;
 color: ${props => props.color || "#FFFFFF"};
 margin: ${props => props.margin || ""}
@@ -74,26 +77,50 @@ border: 1px solid ${props => props.color || "#FFFFFF"};
 margin: -10px 0px;
 `
 
+const ContentWrapper = styled.div`
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: space-between;
+padding: 10px 0px;
+`
+
 const H2 = styled.h2`
 font-family: 'Poppins';
 font-styled: normal;
 font-weight: 700;
-font-size: 2vw;
+font-size: max(20px, 1.5vw);
 line-height: 1.3;
 color: ${props => props.color || "#FFFFFF"};
-padding: ${props => props.padding || ""};
 `
 
 const Paragraph = styled.p`
 color: ${props => props.color || "#FFFFFF"};
-margin: ${props => props.margin || ""};
 font-family: 'Poppins';
 font-styled: normal;
 font-weight: 400;
-max-width: 450px;
+font-size: clamp( 10px, 5vw, 18px)   ;
+max-width: 60ch;
 line-height: 1.4;
 text-align: leading;
-margin: -15px 0px;
+`
+
+const ImageWrapper = styled.div`
+display: block;
+width: min(80%, 42vw)
+`
+
+const Image = styled.img`
+width: 100%;
+padding: 5px 0px;
+`
+
+const Attribution = styled.p`
+font-family: 'Poppins';
+font-styled: normal;
+color: gray;
+margin: -2px 0px;
+
 `
 
 const InfoTab = styled.button`
@@ -108,8 +135,8 @@ align-items: center;
 justify-content: center;
 `
 
-const Image = styled.img`
-width: 2vw;
+const Icon = styled.img`
+width: max(15px, 1.75vw);
 
 `
 
@@ -128,7 +155,6 @@ display: grid;
 grid-template-rows: repeat(4,1fr);
 grid-template-columns: repeat(3, 1fr);
 gap: 0px;
-overflow: auto;
 
 `
 
@@ -157,7 +183,6 @@ const InfopageWrapper = styled(motion.div)`
     overflow: visible;
 `
 
-
 export { 
     Container, 
     Wrapper, 
@@ -166,10 +191,14 @@ export {
     PageContainer, 
     H1, 
     Line, 
+    ContentWrapper,
     H2, 
     Paragraph,
     InfoTab,
+    Icon,
+    ImageWrapper,
     Image,
+    Attribution,
     InfoPageStyle,
     ExitButton,
     InfopageWrapper
