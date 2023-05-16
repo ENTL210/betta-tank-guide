@@ -15,7 +15,7 @@ width: 100%;
 background-color: rgb(1,1,59, 0.2);
 backdrop-filter: blur(10px);
 display: grid;
-grid-template-rows: 0.4fr repeat(3, 2fr);
+grid-template-rows: 0.4fr repeat(3, 5fr);
 grid-template-columns: repeat(8, 1fr);
 margin: 0;
 padding: 10px;
@@ -65,10 +65,11 @@ const H1 = styled.h1`
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;
-font-size: max(30px, 3vw);
+font-size: max(45px, 3vw);
 line-height: 1.2;
 color: ${props => props.color || "#FFFFFF"};
 margin: ${props => props.margin || ""}
+letter-spacing: 1px;
 `
 
 const Line = styled.hr`
@@ -89,9 +90,10 @@ const H2 = styled.h2`
 font-family: 'Poppins';
 font-styled: normal;
 font-weight: 700;
-font-size: max(20px, 1.5vw);
+font-size: max(30px, 1.5vw);
 line-height: 1.3;
 color: ${props => props.color || "#FFFFFF"};
+letter-spacing: 1px;
 `
 
 const Paragraph = styled.p`
@@ -107,18 +109,30 @@ text-align: leading;
 
 const ImageWrapper = styled.div`
 display: block;
-width: min(80%, 42vw)
+width: min(80%, 35vw);
+background-color: #FFFFFF;
+text-align: center;
+border-radius: 20px;
 `
 
 const Image = styled.img`
 width: 100%;
-padding: 5px 0px;
+padding: 0px;
+border-radius: 20px 20px 0px 0px;
 `
 
-const Attribution = styled.p`
+const Attribution = styled(motion.p)`
 font-family: 'Poppins';
 font-styled: normal;
 color: gray;
+margin: -2px 0px;
+padding: 10px;
+`
+
+const Hyperlink = styled(motion.a)`
+font-family: 'Poppins';
+font-styled: normal;
+color: ${props => props.color || "#FFFFFF"};
 margin: -2px 0px;
 
 `
@@ -155,6 +169,7 @@ display: grid;
 grid-template-rows: repeat(4,1fr);
 grid-template-columns: repeat(3, 1fr);
 gap: 0px;
+overflow: auto;
 
 `
 
@@ -183,6 +198,37 @@ const InfopageWrapper = styled(motion.div)`
     overflow: visible;
 `
 
+const H3 = styled.h3`
+font-family: 'Poppins';
+font-styled: normal;
+font-weight: 700;
+font-size: max(18px, 1.4vw);
+line-height: 1.3;
+color: ${props => props.color || "#FFFFFF"};
+letter-spacing: 1px;
+`
+
+const OrderList = styled.ol`
+
+`
+
+const ListItem = styled.li`
+color: ${props => props.color || "#FFFFFF"};
+font-family: 'Poppins';
+font-styled: normal;
+font-weight: 400;
+font-size: clamp( 10px, 5vw, 18px)   ;
+max-width: 50ch;
+line-height: 1.4;
+padding: 10px 2px;
+`
+
+const UnorderedList = styled.ul`
+
+`
+
+
+
 export { 
     Container, 
     Wrapper, 
@@ -199,7 +245,12 @@ export {
     ImageWrapper,
     Image,
     Attribution,
+    Hyperlink,
     InfoPageStyle,
     ExitButton,
-    InfopageWrapper
+    InfopageWrapper,
+    H3,
+    OrderList,
+    ListItem,
+    UnorderedList,
 }

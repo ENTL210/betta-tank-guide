@@ -7,7 +7,6 @@ import infoSymbol from "../images/infoSymbol.png"
 export default function NavigationBar({showInfo, setShowInfo, pathname}) {
     const navigate = useNavigate()
     const location = useLocation()
-    const [tab, setTab] = useState(location.pathname)
     
 
     return (
@@ -19,12 +18,9 @@ export default function NavigationBar({showInfo, setShowInfo, pathname}) {
                 transition={{ ease: "easeIn", duration: 0.2 }}
                 onClick={() => {
                     navigate('/environment')
-                    if (location.pathname !== "/environment") {
-                        setTab("/environment")
-                    }
                 }}
                 animate={{
-                    color: tab === "/environment" ? "#FF9900": "#FFFFFF"
+                    color: location.pathname === "/environment" ? "#FF9900": "#FFFFFF"
                 }}
             >
                 Environment
@@ -36,12 +32,9 @@ export default function NavigationBar({showInfo, setShowInfo, pathname}) {
                 transition={{ ease: "easeIn", duration: 0.2 }}
                 onClick={() => {
                     navigate('/plants')
-                    if (location.pathname !== '/plants') {
-                        setTab("/plants")
-                    }
                 }}
                 animate={{
-                    color: tab === "/plants" ? "#FF9900": "#FFFFFF"
+                    color: location.pathname === "/plants" ? "#FF9900": "#FFFFFF"
                 }}
             >
                 Plants
@@ -53,12 +46,9 @@ export default function NavigationBar({showInfo, setShowInfo, pathname}) {
                 transition={{ ease: "easeIn", duration: 0.2 }}
                 onClick={() => {
                     navigate('/mates')
-                    if (location.pathname !== "/mates") {
-                        setTab("/mates")
-                    }
                 }}
                 animate={{
-                    color: tab === "/mates" ? "#FF9900": "#FFFFFF"
+                    color: location.pathname === "/mates" ? "#FF9900": "#FFFFFF"
                 }}
             >
                 Mates
@@ -70,12 +60,9 @@ export default function NavigationBar({showInfo, setShowInfo, pathname}) {
                 transition={{ ease: "easeIn", duration: 0.2 }}
                 onClick={() => {
                     navigate('/care')
-                    if (location.pathname !== "/care") {
-                        setTab("/care")
-                    }
                 }}
                 animate={{
-                    color: tab === "/care" ? "#FF9900": "#FFFFFF"
+                    color: location.pathname === "/care" ? "#FF9900": "#FFFFFF"
                 }}
             >
                 Care

@@ -1,8 +1,9 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { PageContainer, H1, Line, ContentWrapper, H2, Paragraph, ImageWrapper, Image, Attribution } from "../styles";
+import { PageContainer, H1, Line, ContentWrapper, H2, Paragraph, ImageWrapper, Image, Attribution, Hyperlink } from "../styles";
 import BettaPic from "../images/betta-pic.jpg"
 import BettaSwiming from "../images/betta-swiming.jpg"
+import { hover } from "@testing-library/user-event/dist/hover";
 
 export default function Environment() {
     const location = useLocation()
@@ -27,7 +28,9 @@ export default function Environment() {
                 <H2>Betta's Natural Environment</H2>
                 <ImageWrapper>
                     <Image alt="" src={BettaPic} />
-                    <Attribution>Resting Betta by <a style={{color: "gray"}} href="https://unsplash.com/@timothycdykes">Timothy Dykes</a> {"(Unsplash License)"} </Attribution>
+                    <Attribution>
+                        Resting Betta taken by <Hyperlink color={"gray"} whileHover={{color: "#FF9900"}} transition={{ ease: "easeIn", duration: 0.5 }}  href="https://unsplash.com/@timothycdykes">Timothy Dykes</Hyperlink> {"(Unsplash License)"} 
+                    </Attribution>
                 </ImageWrapper>
                 <Paragraph>
                     First and first, while setting up a fish tank for any type of fish,
