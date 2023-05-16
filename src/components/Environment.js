@@ -27,7 +27,7 @@ export default function Environment() {
             <ContentWrapper>
                 <H2>Betta's Natural Environment</H2>
                 <ImageWrapper>
-                    <Image alt="" src={BettaPic} />
+                    <Image alt="Resting Betta" src={BettaPic} />
                     <Attribution>
                         Resting Betta taken by <Hyperlink color={"gray"} whileHover={{color: "#FF9900"}} transition={{ ease: "easeIn", duration: 0.5 }}  href="https://unsplash.com/@timothycdykes">Timothy Dykes</Hyperlink> {"(Unsplash License)"} 
                     </Attribution>

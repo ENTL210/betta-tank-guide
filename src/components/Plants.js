@@ -24,7 +24,7 @@ export default function Plants() {
             <ContentWrapper>
                 <H3>Java Fern</H3>
                 <ImageWrapper>
-                    <Image alt="" src={JavaFern} />
+                    <Image alt="Java Fern" src={JavaFern} />
                     <Attribution>
                         Java Fern taken By <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://www.flickr.com/photos/dantje/1483653690/">Arifdani Nugraha</Hyperlink> {"(CC BY-NC-SA 2.0)"}
                     </Attribution>
@@ -40,7 +40,7 @@ export default function Plants() {
             <ContentWrapper>
                 <H3>Amazon Sword</H3>
                 <ImageWrapper>
-                    <Image alt="" src={AmazonSword} />
+                    <Image alt="56 Galloms Amazon Sword Tank" src={AmazonSword} />
                     <Attribution>
                         56 Gallons Amazon Sword Tank taken by <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://www.flickr.com/photos/mobile_gnome/16046377980">Mobile_gnome</Hyperlink> {"(CC BY-NC-ND 2.0)"}
                     </Attribution>
@@ -56,7 +56,7 @@ export default function Plants() {
             <ContentWrapper>
                 <H3>Anubias</H3>
                 <ImageWrapper>
-                    <Image alt="" src={Anubias} />
+                    <Image alt="Anubias" src={Anubias} />
                     <Attribution>
                         Anubias taken by <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://commons.wikimedia.org/wiki/File:Anubias.jpg">Colamc</Hyperlink> {"(CC BY-SA 4.0)"}
                     </Attribution>
@@ -72,7 +72,7 @@ export default function Plants() {
             <ContentWrapper>
                 <H3>Vallisneria</H3>
                 <ImageWrapper>
-                    <Image alt="" src={Vallisneria} />
+                    <Image alt="Community Fish Tank with Vallisneria" src={Vallisneria} />
                     <Attribution>
                     Community Fish Tank with Vallisneria taken by <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://commons.wikimedia.org/wiki/File:Fish_Aquarium_with_Vallisneria.jpg">Damitr</Hyperlink> {"(CC BY-SA 4.0)"}
                     </Attribution>
@@ -88,7 +88,7 @@ export default function Plants() {
             <ContentWrapper>
                 <H3>Lobelia cardinalis</H3>
                 <ImageWrapper>
-                    <Image alt="" src={LobeliaCardinalis} />
+                    <Image alt="Cardinal Flower (Lobelia Cardinalis)" src={LobeliaCardinalis} />
                     <Attribution>
                     Cardinal flower (Lobelia cardinalis) taken by <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://www.flickr.com/photos/stevenanichols/">Steven Nichols</Hyperlink> {"(CC BY-NC 2.0)"}
                     </Attribution>
