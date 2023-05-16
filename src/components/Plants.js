@@ -107,19 +107,22 @@ export default function Plants() {
                 <Paragraph>
                 Each variety of plant has a particular method of planting, 
                 and you have to follow the instruction on the label of 
-                each plant; however, there are five fundamental steps that 
+                each plant; however, there are 3 fundamental steps that 
                 all aquatic plants share, as well as one to two tools that 
                 you may need to prepare ahead of time.
                 </Paragraph>
 
-                <H3>Tools you might need</H3>
+                <H3>Tools you might need:</H3>
                 <UnorderedList>
                     <ListItem>
-                        
+                        Scissors
+                    </ListItem>
+                    <ListItem>
+                        Tweezers
                     </ListItem>
                 </UnorderedList>
 
-                <H3>The Five Common Steps are:</H3>
+                <H3>The 3 Common Steps are:</H3>
                 <OrderList>
                     <ListItem>
                         Get the plant out of its package gentely to 
@@ -129,7 +132,22 @@ export default function Plants() {
                         Rinse the plant under water gently, and 
                         remove any excess of gel, if there is any.
                     </ListItem>
+                    <ListItem>
+                        Cut off any yellow or wilted leaves 
+                    </ListItem>
                 </OrderList>
+            </ContentWrapper>
+            <ContentWrapper>
+                <H2>How to Take Care of the Plants </H2>
+                <Paragraph>
+                Aquatic plants are rather simple to care for; simply 
+                examine the plants daily to see if there are any yellow 
+                or wilted leaves and clip them with scissors. Furthermore, 
+                attempt to offer enough light for the plants by utilizing LED 
+                lights and just trimming the plants down to your preferred size 
+                as necessary. Last but not least, try to keep the water paremeter 
+                nice and good.
+                </Paragraph>
             </ContentWrapper>
         </PageContainer>
     )

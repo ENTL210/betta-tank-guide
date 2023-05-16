@@ -77,19 +77,44 @@ export default function InfoPage({ showInfo, setShowInfo }) {
                 <H3 color={"black"} padding={"20px 0px"}>Plants</H3>
                 <OrderList>
                     <ListItem color="black">
-                        Hello
+                    <Hyperlink
+                            whileHover={{ color: "#FF9900" }}
+                            transition={{ ease: "easeIn", duration: 0.5 }}
+                            color={"gray"}
+                            href={"https://aquariumstoredepot.com/blogs/news/best-plants-for-betta-fish"}
+                        >
+                            11 OF THE BEST PLANTS FOR BETTA FISH
+                        </Hyperlink>
                     </ListItem >
                     <ListItem color="black">
-                        Hello
+                    <Hyperlink
+                            whileHover={{ color: "#FF9900" }}
+                            transition={{ ease: "easeIn", duration: 0.5 }}
+                            color={"gray"}
+                            href={"https://www.aquariumcoop.com/blogs/aquarium/easy-aquarium-plants"}
+                        >
+                            Top 10 Easy Aquarium Plants for Beginners
+                        </Hyperlink>
                     </ListItem>
                     <ListItem color="black">
-                        Hello
+                    <Hyperlink
+                            whileHover={{ color: "#FF9900" }}
+                            transition={{ ease: "easeIn", duration: 0.5 }}
+                            color={"gray"}
+                            href={"https://aquariumbreeder.com/lobelia-cardinalis-care-guide-planting-growing-and-propagation/"}
+                        >
+                            Lobelia Cardinalis Care Guide – Planting, Growing, and Propagation
+                        </Hyperlink>
                     </ListItem>
                     <ListItem color="black">
-                        Hello
-                    </ListItem>
-                    <ListItem color="black">
-                        Hello
+                    <Hyperlink
+                            whileHover={{ color: "#FF9900" }}
+                            transition={{ ease: "easeIn", duration: 0.5 }}
+                            color={"gray"}
+                            href={"https://www.aquariumcoop.com/blogs/aquarium/how-to-plant"}
+                        >
+                            Quick Guide: How to Plant Live Aquarium Plants
+                        </Hyperlink>
                     </ListItem>
                 </OrderList>
             </InfopageWrapper>
