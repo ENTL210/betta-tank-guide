@@ -27,7 +27,7 @@ export default function Plants() {
         >
             <H1>Plants</H1>
 
-            <Line size={"15%"} />
+            <Line size={"75px"}/>
             <H2>Top 5 Plants for Betta Fish Tank</H2>
 
             {Card}

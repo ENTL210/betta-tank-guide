@@ -22,7 +22,7 @@ export default function Mates() {
         >
             <H1>Mates</H1>
 
-            <Line size={"15%"} />
+            <Line size={"75px"}/>
 
             <H2>Best Tank Mates for Betta Fish</H2>
 

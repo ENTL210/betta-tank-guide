@@ -22,7 +22,7 @@ export default function Environment() {
         >
             <H1 >Environment</H1>
 
-            <Line size={"20vw"} />
+            <Line size={"75px"}/>
             
             <ContentWrapper>
                 <H2>Betta's Natural Environment</H2>

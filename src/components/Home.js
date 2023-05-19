@@ -1,5 +1,5 @@
 import React from "react";
-import { PageContainer, H1, Line, ContentWrapper, H2, Paragraph, ImageWrapper, Image, Attribution, Hyperlink } from "../styles";
+import { PageContainer, H1, Line, ContentWrapper, H2, Paragraph, ImageWrapper, Image, Attribution, Hyperlink, Header, HeaderAuthor } from "../styles";
 import BettaPic from "../images/betta-pic2.jpg"
 import BettaPic1 from "../images/betta-pic3.jpg"
 import BettaPic2 from "../images/betta-pic4.jpg"
@@ -17,9 +17,12 @@ export default function Home() {
 
             transition={{ ease: "easeIn", duration: 0.5 }}
         >
-            <H1>Home</H1>
+            <Header>
+                <H1>Betta Tank Guide for Beginners</H1>
+                <HeaderAuthor>Edward Lam</HeaderAuthor>
+            </Header>
 
-            <Line size={"12vw"} />
+            <Line size={"75px"}/>
 
             <ContentWrapper>
                 <H2>Introduction</H2>

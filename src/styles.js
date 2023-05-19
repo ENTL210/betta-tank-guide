@@ -27,6 +27,7 @@ background-color: rgb(77,77,77, 0.80);
 border-radius: 20px;
 grid-row: 1 / span 1;
 grid-column: 1 / -1;
+height: 50px;
 padding: 5px;
 margin: 36px;
 display: flex;
@@ -180,6 +181,22 @@ align-items: center;
 justify-content: center;
 `
 
+const Header = styled.header`
+display: flex;
+flex-direction: column;
+justify-content: center;
+`
+
+const HeaderAuthor = styled.p`
+color: ${props => props.color || "#FFFFFF"};
+font-family: 'Poppins';
+font-styled: normal;
+font-weight: 400;
+font-size: clamp( 10px, 5vw, 18px)   ;
+max-width: 50ch;
+margin-top: -15px;
+`
+
 
 
 export { 
@@ -201,5 +218,7 @@ export {
     OrderList,
     ListItem,
     UnorderedList,
-    Footer
+    Footer,
+    Header,
+    HeaderAuthor
 }

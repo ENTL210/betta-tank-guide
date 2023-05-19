@@ -16,7 +16,7 @@ export default function Care() {
         >
             <H1>Care</H1>
 
-            <Line size={"15%"}/>
+            <Line size={"75px"}/>
 
         </PageContainer>
     )
