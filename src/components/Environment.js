@@ -23,13 +23,13 @@ export default function Environment() {
             <H1 >Environment</H1>
 
             <Line size={"20vw"} />
-
+            
             <ContentWrapper>
                 <H2>Betta's Natural Environment</H2>
                 <ImageWrapper>
                     <Image alt="Resting Betta" src={BettaPic} />
                     <Attribution>
-                        Resting Betta taken by <Hyperlink color={"gray"} whileHover={{color: "#FF9900"}} transition={{ ease: "easeIn", duration: 0.5 }}  href="https://unsplash.com/@timothycdykes">Timothy Dykes</Hyperlink> {"(Unsplash License)"} 
+                        Resting Betta taken by <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://unsplash.com/@timothycdykes">Timothy Dykes</Hyperlink> {"(Unsplash License)"}
                     </Attribution>
                 </ImageWrapper>
                 <Paragraph>
@@ -59,11 +59,11 @@ export default function Environment() {
             <ContentWrapper>
                 <H2>Idea Water's Temperature</H2>
                 <Paragraph>
-                Betta originate in freshwater environments in Southeast Asia, where the typical 
-                temperature is around 75 degrees Fahrenheit, hence Betta fish require a temperature
-                in their environment that is similar to this to stay healthy. It is necessary to use
-                an aquarium heater to keep the temperature around 75 degrees Fahrenheit. However, 
-                if you live in an area where it is warm all year, you do not need an aquarium heater.
+                    Betta originate in freshwater environments in Southeast Asia, where the typical
+                    temperature is around 75 degrees Fahrenheit, hence Betta fish require a temperature
+                    in their environment that is similar to this to stay healthy. It is necessary to use
+                    an aquarium heater to keep the temperature around 75 degrees Fahrenheit. However,
+                    if you live in an area where it is warm all year, you do not need an aquarium heater.
                 </Paragraph>
             </ContentWrapper>
 
@@ -71,13 +71,17 @@ export default function Environment() {
                 <H2>Things Betta Fish Love to Have in Their Tank </H2>
 
                 <Paragraph>
-                To keep the Betta fish happy, there should be some decorations and accessories in 
-                the tank for them to play with, hide in, and sleep on. Live plants, caverns, 
-                driftwood, and other aquarium decorations are among the items you should consider 
-                putting in the tank. However, one thing to keep in mind while selecting decorations 
-                for your tank is that the object must have smooth, rounded edges since anything too 
-                rough or too sharp might wind up harming them.
+                    To keep the Betta fish happy, there should be some decorations and accessories in
+                    the tank for them to play with, hide in, and sleep on. Live plants, caverns,
+                    driftwood, and other aquarium decorations are among the items you should consider
+                    putting in the tank. However, one thing to keep in mind while selecting decorations
+                    for your tank is that the object must have smooth, rounded edges since anything too
+                    rough or too sharp might wind up harming them.
                 </Paragraph>
+
+                <Attribution>
+                    From <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://bettasource.com/best-environment-for-betta-fish">BettaSource</Hyperlink> & <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://www.aquariumcoop.com/blogs/aquarium/betta-tank-setup"> Aquarium Co-op</Hyperlink>
+                </Attribution>
             </ContentWrapper>
 
 

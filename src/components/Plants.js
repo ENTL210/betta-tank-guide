@@ -5,8 +5,16 @@ import AmazonSword from "../images/amazon-sword.jpg"
 import Anubias from "../images/anubias.jpeg"
 import Vallisneria from "../images/vallisneria.jpg"
 import LobeliaCardinalis from "../images/lobelia-cardinalis.jpg"
+import data from "../PlantsData.js"
+import PlantCard from "./PlantsCard";
 
 export default function Plants() {
+    const Card = data.map(item => {
+        return <PlantCard
+            key={item.id}
+            {...item}
+        />
+    })
     return (
         <PageContainer
             initial={{
@@ -20,96 +28,22 @@ export default function Plants() {
             <H1>Plants</H1>
 
             <Line size={"15%"} />
-            <H2>Top 5 Plants for Betta Fish Tank for Novices</H2>
-            <ContentWrapper>
-                <H3>Java Fern</H3>
-                <ImageWrapper>
-                    <Image alt="Java Fern" src={JavaFern} />
-                    <Attribution>
-                        Java Fern taken By <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://www.flickr.com/photos/dantje/1483653690/">Arifdani Nugraha</Hyperlink> {"(CC BY-NC-SA 2.0)"}
-                    </Attribution>
-                </ImageWrapper>
-                <UnorderedList>
-                    <ListItem>Easy to take care</ListItem>
-                    <ListItem>Light Required: Moderate</ListItem>
-                    <ListItem>Temperature Paremeter: 64 - 82°F</ListItem>
-                    <ListItem>CO2 Required: NO</ListItem>
-                    <ListItem>Growth Rate: Slow</ListItem>
-                </UnorderedList>
-            </ContentWrapper>
-            <ContentWrapper>
-                <H3>Amazon Sword</H3>
-                <ImageWrapper>
-                    <Image alt="56 Galloms Amazon Sword Tank" src={AmazonSword} />
-                    <Attribution>
-                        56 Gallons Amazon Sword Tank taken by <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://www.flickr.com/photos/mobile_gnome/16046377980">Mobile_gnome</Hyperlink> {"(CC BY-NC-ND 2.0)"}
-                    </Attribution>
-                </ImageWrapper>
-                <UnorderedList>
-                    <ListItem>Easy to take care</ListItem>
-                    <ListItem>Light Required: Moderate</ListItem>
-                    <ListItem>Temperature Paremeter: 72 to 82°F</ListItem>
-                    <ListItem>CO2 Required: No</ListItem>
-                    <ListItem>Growth Rate: Moderate</ListItem>
-                </UnorderedList>
-            </ContentWrapper>
-            <ContentWrapper>
-                <H3>Anubias</H3>
-                <ImageWrapper>
-                    <Image alt="Anubias" src={Anubias} />
-                    <Attribution>
-                        Anubias taken by <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://commons.wikimedia.org/wiki/File:Anubias.jpg">Colamc</Hyperlink> {"(CC BY-SA 4.0)"}
-                    </Attribution>
-                </ImageWrapper>
-                <UnorderedList>
-                    <ListItem>Easy to take care</ListItem>
-                    <ListItem>Light Required: Low to Moderate</ListItem>
-                    <ListItem>Temperature Paremeter: 72 to 82°F</ListItem>
-                    <ListItem>CO2 Required: No</ListItem>
-                    <ListItem>Growth Rate: Slow</ListItem>
-                </UnorderedList>
-            </ContentWrapper>
-            <ContentWrapper>
-                <H3>Vallisneria</H3>
-                <ImageWrapper>
-                    <Image alt="Community Fish Tank with Vallisneria" src={Vallisneria} />
-                    <Attribution>
-                    Community Fish Tank with Vallisneria taken by <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://commons.wikimedia.org/wiki/File:Fish_Aquarium_with_Vallisneria.jpg">Damitr</Hyperlink> {"(CC BY-SA 4.0)"}
-                    </Attribution>
-                </ImageWrapper>
-                <UnorderedList>
-                    <ListItem>Easy to take care</ListItem>
-                    <ListItem>Light Required: Low to Moderate</ListItem>
-                    <ListItem>Temperature Paremeter: 72 to 82°F</ListItem>
-                    <ListItem>CO2 Required: No</ListItem>
-                    <ListItem>Growth Rate: Slow</ListItem>
-                </UnorderedList>
-            </ContentWrapper>
-            <ContentWrapper>
-                <H3>Lobelia cardinalis</H3>
-                <ImageWrapper>
-                    <Image alt="Cardinal Flower (Lobelia Cardinalis)" src={LobeliaCardinalis} />
-                    <Attribution>
-                    Cardinal flower (Lobelia cardinalis) taken by <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://www.flickr.com/photos/stevenanichols/">Steven Nichols</Hyperlink> {"(CC BY-NC 2.0)"}
-                    </Attribution>
-                </ImageWrapper>
-                <UnorderedList>
-                    <ListItem>Easy to take care</ListItem>
-                    <ListItem>Light Required: Moderate to High</ListItem>
-                    <ListItem>Temperature Paremeter: 61 - 79 °F</ListItem>
-                    <ListItem>CO2 Required: No, but grow better with CO2</ListItem>
-                    <ListItem>Growth Rate: Slow to Moderate</ListItem>
-                </UnorderedList>
-            </ContentWrapper>
+            <H2>Top 5 Plants for Betta Fish Tank</H2>
+
+            {Card}
+
+            <Attribution>
+                From <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://aquariumstoredepot.com/blogs/news/best-plants-for-betta-fish">Aquarium Store Depot</Hyperlink> & <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://www.aquariumcoop.com/blogs/aquarium/easy-aquarium-plants">Aquarium Co-op</Hyperlink>
+            </Attribution>
 
             <ContentWrapper>
                 <H2>How to Plant Them</H2>
                 <Paragraph>
-                Each variety of plant has a particular method of planting, 
-                and you have to follow the instruction on the label of 
-                each plant; however, there are 3 fundamental steps that 
-                all aquatic plants share, as well as one to two tools that 
-                you may need to prepare ahead of time.
+                    Each variety of plant has a particular method of planting,
+                    and you have to follow the instruction on the label of
+                    each plant; however, there are 3 fundamental steps that
+                    all aquatic plants share, as well as one to two tools that
+                    you may need to prepare ahead of time.
                 </Paragraph>
 
                 <H3>Tools you might need:</H3>
@@ -122,32 +56,40 @@ export default function Plants() {
                     </ListItem>
                 </UnorderedList>
 
-                <H3>The 3 Common Steps are:</H3>
+                <H3>The 3 common steps are:</H3>
                 <OrderList>
                     <ListItem>
-                        Get the plant out of its package gentely to 
+                        Get the plant out of its package gentely to
                         prevent any damage to the root or the plant itself.
                     </ListItem>
                     <ListItem>
-                        Rinse the plant under water gently, and 
+                        Rinse the plant under water gently, and
                         remove any excess of gel, if there is any.
                     </ListItem>
                     <ListItem>
-                        Cut off any yellow or wilted leaves 
+                        Cut off any yellow or wilted leaves
                     </ListItem>
                 </OrderList>
+
+                <Attribution>
+                    From <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://www.aquariumcoop.com/blogs/aquarium/how-to-plant">Aquairum Co-op</Hyperlink>
+                </Attribution>
             </ContentWrapper>
             <ContentWrapper>
                 <H2>How to Take Care of the Plants </H2>
                 <Paragraph>
-                Aquatic plants are rather simple to care for; simply 
-                examine the plants daily to see if there are any yellow 
-                or wilted leaves and clip them with scissors. Furthermore, 
-                attempt to offer enough light for the plants by utilizing LED 
-                lights and just trimming the plants down to your preferred size 
-                as necessary. Last but not least, try to keep the water paremeter 
-                nice and good.
+                    Aquatic plants are rather simple to care for; simply
+                    examine the plants daily to see if there are any yellow
+                    or wilted leaves and clip them with scissors. Furthermore,
+                    attempt to offer enough light for the plants by utilizing LED
+                    lights and just trimming the plants down to your preferred size
+                    as necessary. Last but not least, try to keep the water paremeter
+                    nice and good.
                 </Paragraph>
+
+                <Attribution>
+                    From <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://splashyfishstore.com/blogs/care-guide-for-live-aquarium-plant/how-to-take-care-of-live-aquarium-plants">Splashy Fish</Hyperlink>
+                </Attribution>
             </ContentWrapper>
         </PageContainer>
     )

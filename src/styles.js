@@ -7,15 +7,16 @@ min-height: 100vh;
 display: flex;
 align-items: center;
 justify-content: center;
+margin: 0;
 `
 
 const Wrapper = styled(motion.div)`
 min-height: 100vh;
 width: 100%;
-background-color: rgb(1,1,59, 0.2);
-backdrop-filter: blur(10px);
+background-color: rgb(1,1,59, 0.5);
+backdrop-filter: blur(20px);
 display: grid;
-grid-template-rows: 0.4fr repeat(3, 5fr);
+grid-template-rows: 0.4fr repeat(3, 5fr) 0.2fr;
 grid-template-columns: repeat(8, 1fr);
 margin: 0;
 padding: 10px;
@@ -25,7 +26,7 @@ const NavbarWrapper = styled.div`
 background-color: rgb(77,77,77, 0.80);
 border-radius: 20px;
 grid-row: 1 / span 1;
-grid-column: 2 / span 6;
+grid-column: 1 / -1;
 padding: 5px;
 margin: 36px;
 display: flex;
@@ -50,7 +51,7 @@ outline: inherit;
 
 const PageContainer = styled(motion.div)`
 grid-row: 2 / -1;
-grid-column: 2 / span 6;
+grid-column: 1 / -1;
 margin: 0px 36px;
 padding: 10px 0px;
 display: flex;
@@ -64,7 +65,7 @@ gap: 0px;
 const H1 = styled.h1`
 font-family: 'Poppins';
 font-style: normal;
-font-weight: 700;
+font-weight: 1000;
 font-size: max(45px, 3vw);
 line-height: 1.2;
 color: ${props => props.color || "#FFFFFF"};
@@ -89,7 +90,7 @@ padding: 10px 0px;
 const H2 = styled.h2`
 font-family: 'Poppins';
 font-styled: normal;
-font-weight: 700;
+font-weight: 800;
 font-size: max(30px, 1.5vw);
 line-height: 1.3;
 color: ${props => props.color || "#FFFFFF"};
@@ -102,7 +103,7 @@ font-family: 'Poppins';
 font-styled: normal;
 font-weight: 400;
 font-size: clamp( 10px, 5vw, 18px)   ;
-max-width: 60ch;
+max-width: 50ch;
 line-height: 1.4;
 text-align: leading;
 `
@@ -126,7 +127,7 @@ font-family: 'Poppins';
 font-styled: normal;
 color: gray;
 margin: -2px 0px;
-padding: 10px;
+padding: 10px 0px;
 `
 
 const Hyperlink = styled(motion.a)`
@@ -201,7 +202,7 @@ const InfopageWrapper = styled(motion.div)`
 const H3 = styled.h3`
 font-family: 'Poppins';
 font-styled: normal;
-font-weight: 700;
+font-weight: 600;
 font-size: max(18px, 1.4vw);
 line-height: 1.3;
 color: ${props => props.color || "#FFFFFF"};
@@ -225,6 +226,17 @@ padding: 10px 2px;
 
 const UnorderedList = styled.ul`
 
+`
+
+const Footer = styled.footer`
+grid-row: -1 / -1;
+grid-column: 1 / -1;
+width: 100%;
+padding: 10px;
+height: 30px;
+display: flex;
+align-items: center; 
+justify-content: center;
 `
 
 
@@ -253,4 +265,5 @@ export {
     OrderList,
     ListItem,
     UnorderedList,
+    Footer
 }
