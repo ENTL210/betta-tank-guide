@@ -2,7 +2,7 @@ export default [
     {
         id: 1,
         name: "Java Fern",
-        image: require("./images/java-fern.jpeg"),
+        image: require("../images/java-fern.jpeg"),
         attribution: [
             {
                 title: "Java Fern",
@@ -25,7 +25,7 @@ export default [
     {
         id: 2,
         name: "Amazon Sword",
-        image: require("./images/amazon-sword.jpg"),
+        image: require("../images/amazon-sword.jpg"),
         attribution: [
             {
                 title: "56 Gallons Amazon Sword Tank",
@@ -48,7 +48,7 @@ export default [
     {
         id: 3,
         name: "Anubias",
-        image: require("./images/anubias.jpeg"),
+        image: require("../images/anubias.jpeg"),
         attribution: [
             {
                 title: "Anubias",
@@ -71,7 +71,7 @@ export default [
     {
         id: 4,
         name: "Vallisneria",
-        image: require("./images/vallisneria.jpg"),
+        image: require("../images/vallisneria.jpg"),
         attribution: [
             {
                 title: "Community Fish Tank with Vallisneria",
@@ -94,7 +94,7 @@ export default [
     {
         id: 5,
         name: "Lobelia cardinalis",
-        image: require("./images/lobelia-cardinalis.jpg"),
+        image: require("../images/lobelia-cardinalis.jpg"),
         attribution: [
             {
                 title: "Cardinal Flower (Lobelia Cardinalis)",

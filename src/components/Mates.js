@@ -1,7 +1,7 @@
 import React from "react";
 import { PageContainer, H1, Line, ContentWrapper, H2, Paragraph, H3, ImageWrapper, Image, Attribution, Hyperlink, UnorderedList, ListItem, OrderList } from "../styles";
 import MatesCard from "./MatesCard";
-import data from "../MatesData";
+import data from "../data/MatesData";
 
 export default function Mates() {
     const Card = data.map(item => {

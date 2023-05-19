@@ -5,7 +5,7 @@ import AmazonSword from "../images/amazon-sword.jpg"
 import Anubias from "../images/anubias.jpeg"
 import Vallisneria from "../images/vallisneria.jpg"
 import LobeliaCardinalis from "../images/lobelia-cardinalis.jpg"
-import data from "../PlantsData.js"
+import data from "../data/PlantsData.js"
 import PlantCard from "./PlantsCard";
 
 export default function Plants() {

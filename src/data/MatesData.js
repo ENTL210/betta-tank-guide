@@ -2,7 +2,7 @@ export default [
     {
         id: 1,
         fishName: "Neon Tetra",
-        image: require("./images/neon-tetra.jpeg"),
+        image: require("../images/neon-tetra.jpeg"),
         attribution: [
             {
                 title: "Neon Tetra",
@@ -21,7 +21,7 @@ export default [
     {
         id: 2,
         fishName: "Corydoras Catfish",
-        image: require("./images/corydoras-catfish.jpeg"),
+        image: require("../images/corydoras-catfish.jpeg"),
         attribution: [
             {
                 title: "Corydoras Sterbai",
@@ -39,7 +39,7 @@ export default [
     {
         id: 3,
         fishName: "Guppies",
-        image: require("./images/guppy.jpeg"),
+        image: require("../images/guppy.jpeg"),
         attribution: [
             {
                 title: "Guppy Poecilia Reticulata",
@@ -61,7 +61,7 @@ export default [
     {
         id: 4,
         fishName: "Harlequin Rasboras",
-        image: require("./images/harlequin-rasboras.jpeg"),
+        image: require("../images/harlequin-rasboras.jpeg"),
         attribution: [
             {
                 title: "Harlequin Rasboras",
@@ -79,7 +79,7 @@ export default [
     }, {
         id: 5,
         fishName: "Ember Tetras",
-        image: require("./images/ember-tetra.jpeg"),
+        image: require("../images/ember-tetra.jpeg"),
         attribution: [
             {
                 title: "Hyphessobrycon Amandae",
