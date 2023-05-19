@@ -140,67 +140,6 @@ margin: -2px 0px;
 
 `
 
-const InfoTab = styled.button`
-color: #FFFF;
-text-decoration: none;
-background: none;
-border: none;
-padding: 5px;
-cursor: pointer;
-outline: inherit;
-align-items: center;
-justify-content: center;
-`
-
-const Icon = styled.img`
-width: max(15px, 1.75vw);
-
-`
-
-const InfoPageStyle = styled(motion.div)`
-position: absolute;
-background-color: rgb(255,255,255);
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-z-index: 9;
-width: 75%;
-height: 75%;
-border-radius: 20px;
-padding: 10px;
-display: grid;
-grid-template-rows: repeat(4,1fr);
-grid-template-columns: repeat(3, 1fr);
-gap: 0px;
-overflow: auto;
-
-`
-
-const ExitButton = styled(motion.button)`
-    background: none;
-	border: none;
-    padding: 5px;
-	cursor: pointer;
-	outline: inherit;
-    position: absolute;
-    left: 80%;
-    font-size: 2vw;
-    padding-top: 20px;
-    grid-column: 3 / span 1;
-    grid-rows: 1 / span 1;
-`
-
-const InfopageWrapper = styled(motion.div)`
-    grid-column: 1 / -1;
-    grid-row: 2 / span -1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    padding: 10px;
-    overflow: visible;
-`
-
 const H3 = styled.h3`
 font-family: 'Poppins';
 font-styled: normal;
@@ -254,15 +193,10 @@ export {
     ContentWrapper,
     H2, 
     Paragraph,
-    InfoTab,
-    Icon,
     ImageWrapper,
     Image,
     Attribution,
     Hyperlink,
-    InfoPageStyle,
-    ExitButton,
-    InfopageWrapper,
     H3,
     OrderList,
     ListItem,

@@ -8,8 +8,6 @@ import Care from "./components/Care";
 import Environment from "./components/Environment";
 import Mates from "./components/Mates";
 import Plants from "./components/Plants";
-import InfoPage from "./components/InfoPage";
-import InfoComponent from "./components/PlantsCard";
 import Home from "./components/Home";
 
 
@@ -26,9 +24,6 @@ export default function App() {
                 backgroundPosition: "50% 50%",
             }}
         >
-            {showInfo === true &&
-                <InfoPage showInfo={showInfo} setShowInfo={setShowInfo}/>
-            }
             <Wrapper
                 animate={{
                     filter: showInfo === true ? "blur(10px)" : "",
