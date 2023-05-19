@@ -38,7 +38,7 @@ export default function App() {
             >
                 <NavigationBar showInfo={showInfo} setShowInfo={setShowInfo} pathname={location.pathname} />
                 <Routes>
-                    <Route path="/" element={<Navigate to="/environment" />} />
+                    <Route path="/" element={<Navigate to="/home" />} />
                     <Route path="home" element={<Home/>} />
                     <Route path="environment" element={<Environment />} />
                     <Route path="plants" element={<Plants />} />

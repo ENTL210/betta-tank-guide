@@ -110,10 +110,12 @@ text-align: leading;
 
 const ImageWrapper = styled.div`
 display: block;
-width: min(80%, 35vw);
+width: min(80%, 42vw);
 background-color: #FFFFFF;
 text-align: center;
 border-radius: 20px;
+margin: 10px 0px;
+padding: 5px;
 `
 
 const Image = styled.img`
