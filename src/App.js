@@ -2,19 +2,27 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import background from "./images/background.png"
 import { Routes, Route, useNavigate, useLocation, Navigate } from "react-router-dom";
-import { Attribution, Container, Footer, Hyperlink, Wrapper } from "./styles"
+import { Attribution, Container, Footer, Hyperlink, PageContainer, PageWrapper, Wrapper, ScrollToTopBtn} from "./styles"
 import NavigationBar from "./components/NavigationBar";
 import Care from "./components/Care";
 import Environment from "./components/Environment";
 import Mates from "./components/Mates";
 import Plants from "./components/Plants";
 import Home from "./components/Home";
-
+import { color } from "framer-motion";
 
 export default function App() {
     const navigate = useNavigate()
     const location = useLocation()
-    const [showInfo, setShowInfo] = useState(false)
+    const [scrollTop, setScrollTop] = useState(0)
+
+    const handleScrolling = () => {
+        const position = document.body.scrollTop;
+        setScrollTop(position);
+    }
+
+    document.body.addEventListener('scroll', handleScrolling);
+
     return (
         <Container
             style={{
@@ -25,21 +33,55 @@ export default function App() {
             }}
         >
             <Wrapper
-                animate={{
-                    filter: showInfo === true ? "blur(10px)" : "",
-                    pointerEvents: showInfo === true ? "none" : "",
-                }}
                 transition={{ ease: "easeIn", duration: 0.5 }}
             >
-                <NavigationBar showInfo={showInfo} setShowInfo={setShowInfo} pathname={location.pathname} />
-                <Routes>
-                    <Route path="/" element={<Navigate to="/home" />} />
-                    <Route path="home" element={<Home/>} />
-                    <Route path="environment" element={<Environment />} />
-                    <Route path="plants" element={<Plants />} />
-                    <Route path="mates" element={<Mates />} />
-                    <Route path="care" element={<Care />} />
-                </Routes>
+
+                <NavigationBar pathname={location.pathname}/>
+                
+                {scrollTop >= 200 && 
+                    <ScrollToTopBtn
+                        initial={{
+                            opacity: 0,
+                        }}
+                        animate={{
+                            opacity: scrollTop >= 150 ? 1 : 0
+                            
+                        }}
+                        transition={{ease: "easeIn", duration: 0.5}}
+                        whileHover={{
+                            color: "#FF9900"
+                        }}
+                        onClick={() => {
+                            document.body.scrollTo({
+                                top: 0,
+                                behavior: "smooth"
+                            })
+                        }}
+                    >
+                        ↑
+                    </ScrollToTopBtn>
+                }
+
+                <PageWrapper
+                    initial={{
+                        opacity: 0
+                    }}
+                    animate={{
+                        opacity: 1,
+                    }}
+                    scrollTop={scrollTop}
+
+                    transition={{ ease: "easeIn", duration: 0.5 }}
+                >
+                    <Routes>
+                        <Route path="/" element={<Navigate to="/home" />} />
+                        <Route path="home" element={<Home />} />
+                        <Route path="environment" element={<Environment />} />
+                        <Route path="plants" element={<Plants />} />
+                        <Route path="mates" element={<Mates />} />
+                        <Route path="care" element={<Care />} />
+                    </Routes>
+                </PageWrapper>
 
                 <Footer>
                     <Attribution>

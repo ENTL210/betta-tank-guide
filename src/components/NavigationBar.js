@@ -4,13 +4,22 @@ import { NavbarWrapper, NavbarTab, InfoTab, Icon } from "../styles"
 import { motion } from "framer-motion";
 import home from "../images/home.png"
 
-export default function NavigationBar({ showInfo, setShowInfo, pathname }) {
+export default function NavigationBar({ showInfo, setShowInfo, pathname, navShown }) {
     const navigate = useNavigate()
     const location = useLocation()
 
 
+
     return (
-        <NavbarWrapper>
+        <NavbarWrapper
+            initial={{
+                opacity: 0,
+            }}
+            animate={{
+                opacity: 1
+            }}
+            transition={{ ease: "easeIn", duration: 0.2 }}
+        >
             <NavbarTab
                 whileHover={{
                     color: '#FF9900',

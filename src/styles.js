@@ -22,7 +22,8 @@ margin: 0;
 padding: 10px;
 `
 
-const NavbarWrapper = styled.div`
+
+const NavbarWrapper = styled(motion.div)`
 background-color: rgb(77,77,77, 0.80);
 border-radius: 20px;
 grid-row: 1 / span 1;
@@ -39,7 +40,7 @@ const NavbarTab = styled(motion.button)`
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;
-font-size: max(12px, 1.5vw);
+font-size: max(12px, 1.6vw);
 color: #FFFF;
 text-decoration: none;
 background: none;
@@ -47,7 +48,20 @@ border: none;
 padding: 5px;
 cursor: pointer;
 outline: inherit;
+`
 
+
+const PageWrapper = styled(motion.div)`
+grid-row: 2 / -1;
+grid-column: 1 / -1;
+margin: 0px 36px;
+padding: 10px 0px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+flex-wrap: wrap;
+justify-content: flex-start;
+gap: 0px;
 `
 
 const PageContainer = styled(motion.div)`
@@ -109,7 +123,7 @@ line-height: 1.4;
 text-align: leading;
 `
 
-const ImageWrapper = styled.div`
+const ImageWrapper = styled(motion.div)`
 display: block;
 width: min(80%, 42vw);
 background-color: #FFFFFF;
@@ -197,18 +211,36 @@ max-width: 50ch;
 margin-top: -15px;
 `
 
+const ScrollToTopBtn = styled(motion.button)`
+position: sticky;
+bottom: 15px;
+left: 95%;
+width: 50px;
+height: 50px;
+background: rgb(77,77,77, 0.80);
+color: white;
+border: none;
+padding: 0;
+font: inherit;
+cursor: pointer;
+outline: inherit;
+font-size: 40px;
+border-radius: 60px;
+`
 
 
-export { 
-    Container, 
-    Wrapper, 
-    NavbarWrapper, 
-    NavbarTab, 
-    PageContainer, 
-    H1, 
-    Line, 
+
+export {
+    Container,
+    Wrapper,
+    NavbarWrapper,
+    NavbarTab,
+    PageWrapper,
+    PageContainer,
+    H1,
+    Line,
     ContentWrapper,
-    H2, 
+    H2,
     Paragraph,
     ImageWrapper,
     Image,
@@ -220,5 +252,6 @@ export {
     UnorderedList,
     Footer,
     Header,
-    HeaderAuthor
+    HeaderAuthor,
+    ScrollToTopBtn,
 }

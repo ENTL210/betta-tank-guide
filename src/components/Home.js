@@ -1,11 +1,17 @@
 import React from "react";
 import { PageContainer, H1, Line, ContentWrapper, H2, Paragraph, ImageWrapper, Image, Attribution, Hyperlink, Header, HeaderAuthor } from "../styles";
 import BettaPic from "../images/betta-pic2.jpg"
-import BettaPic1 from "../images/betta-pic3.jpg"
-import BettaPic2 from "../images/betta-pic4.jpg"
-import BettaPic3 from "../images/betta-pic5.jpg"
+import BettaPicData from "../data/BettaPicData";
+import BettaPicCard from "./BettaPicCard";
 
 export default function Home() {
+    const PicCard = BettaPicData.map(item => {
+        return <BettaPicCard 
+            key={item.id}
+            {...item}
+        />
+    })
+
     return (
         <PageContainer
             initial={{
@@ -41,24 +47,7 @@ export default function Home() {
             </ContentWrapper>
             <ContentWrapper>
                 <H2>Pictures of Betta</H2>
-                <ImageWrapper>
-                    <Image alt="Two Beautiful Bettas" src={BettaPic1} />
-                    <Attribution>
-                        Two Beautiful Bettas taken by <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://unsplash.com/@worachatsodsri">Worachat Sodsri</Hyperlink> {"(Unsplash License)"}
-                    </Attribution>
-                </ImageWrapper>
-                <ImageWrapper>
-                    <Image alt="Blue Betta swiming" src={BettaPic2} />
-                    <Attribution>
-                        Blue Betta swiming taken by <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://unsplash.com/@jayasuryakarthik">Jaya Surya Karthik</Hyperlink> {"(Unsplash License)"}
-                    </Attribution>
-                </ImageWrapper>
-                <ImageWrapper>
-                    <Image alt="Red, White, and Blue Betta swiming" src={BettaPic3} />
-                    <Attribution>
-                        Red, White, and Blue Betta swiming taken by <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://unsplash.com/@huyphan2602">Huy Phan</Hyperlink> {"(Unsplash License)"}
-                    </Attribution>
-                </ImageWrapper>
+                {PicCard}
             </ContentWrapper>
         </PageContainer>
     )
