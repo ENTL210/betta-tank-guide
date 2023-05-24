@@ -38,13 +38,13 @@ export default function App() {
 
                 <NavigationBar pathname={location.pathname}/>
                 
-                {scrollTop >= 200 && 
+                {scrollTop >= 120 && 
                     <ScrollToTopBtn
                         initial={{
                             opacity: 0,
                         }}
                         animate={{
-                            opacity: scrollTop >= 150 ? 1 : 0
+                            opacity: scrollTop >= 120 ? 1 : 0
                             
                         }}
                         transition={{ease: "easeIn", duration: 0.5}}
