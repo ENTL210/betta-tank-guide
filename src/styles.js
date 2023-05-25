@@ -121,7 +121,7 @@ padding: 10px 0px;
 const H2 = styled.h2`
 font-family: 'Poppins';
 font-styled: normal;
-font-weight: 800;
+font-weight: 600;
 font-size: max(30px, 1.5vw);
 line-height: 1.3;
 color: ${props => props.color || "#FFFFFF"};

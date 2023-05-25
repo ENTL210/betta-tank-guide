@@ -27,7 +27,9 @@ export default function Plants() {
         >
             <H1>Plants</H1>
 
-            <Line size={"75px"}/>
+            <Line size={"75px"} />
+
+
             <H2>Top 5 Plants for Betta Fish Tank</H2>
 
             {Card}
@@ -74,8 +76,6 @@ export default function Plants() {
                 <Attribution>
                     From <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://www.aquariumcoop.com/blogs/aquarium/how-to-plant">Aquairum Co-op</Hyperlink>
                 </Attribution>
-            </ContentWrapper>
-            <ContentWrapper>
                 <H2>How to Take Care of the Plants </H2>
                 <Paragraph>
                     Aquatic plants are rather simple to care for; simply

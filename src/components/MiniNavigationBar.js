@@ -20,6 +20,10 @@ export default function MiniNavigationBar({ scrollTop }) {
                 transition={{ ease: "easeIn", duration: 0.2 }}
                 onClick={() => {
                     navigate(item.path)
+                    document.body.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    })
                 }}
                 animate={{
                     opacity: scrollTop >= 300 ? 1 : 0,

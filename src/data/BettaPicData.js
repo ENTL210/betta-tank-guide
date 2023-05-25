@@ -16,10 +16,10 @@ export default [
         image: require("../images/betta-pic4.jpg"),
         attribution: [
             {
-                title: "Blue Betta swiming",
-                author: "Jaya Surya Karthik",
+                title: "Red and white Betta swimming",
+                author: "Klara Kulikova",
                 copyrightLicense: "Unsplash License",
-                href: "https://unsplash.com/@jayasuryakarthik"
+                href: "https://unsplash.com/@kkalerry"
             }
         ]
     },
