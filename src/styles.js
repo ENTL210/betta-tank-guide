@@ -50,6 +50,22 @@ cursor: pointer;
 outline: inherit;
 `
 
+const MiniNavBarWrapper = styled(motion.div)`
+position: sticky; 
+bottom: 15px;
+left: 95%;
+width: 0px;
+heihgt: 0px;
+background-color: rgb(77,77,77, 0.80);
+border-radius: 20px;
+padding: 5px;
+margin: 36px;
+display: flex;
+align-items: center; 
+justify-content: space-evenly;
+user-select: none;
+`
+
 
 const PageWrapper = styled(motion.div)`
 grid-row: 2 / -1;
@@ -210,22 +226,23 @@ font-size: clamp( 10px, 5vw, 18px)   ;
 max-width: 50ch;
 margin-top: -15px;
 `
+const ScrollToTopBtn = styled(motion.button)`
+ position: sticky;
+ bottom: 15px;
+ left: 95%;
+ width: 50px;
+ height: 50px;
+ background: rgb(77,77,77, 0.80);
+ color: white;
+ border: none;
+ padding: 0;
+ font: inherit;
+ cursor: pointer;
+ outline: inherit;
+ font-size: 40px;
+ border-radius: 60px;
+ `
 
-const MiniNavBarWrapper = styled(motion.div)`
-position: sticky; 
-bottom: 15px;
-left: 95%;
-width: 0px;
-heihgt: 0px;
-background-color: rgb(77,77,77, 0.80);
-border-radius: 20px;
-padding: 5px;
-margin: 36px;
-display: flex;
-align-items: center; 
-justify-content: space-evenly;
-user-select: none;
-`
 
 
 export {
@@ -251,5 +268,6 @@ export {
     Footer,
     Header,
     HeaderAuthor,
-    MiniNavBarWrapper
+    MiniNavBarWrapper,
+    ScrollToTopBtn
 }
