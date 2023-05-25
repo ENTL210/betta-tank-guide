@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { NavbarWrapper, NavbarTab, InfoTab, Icon } from "../styles"
-import { motion } from "framer-motion";
-import home from "../images/home.png"
+import { MiniNavBarWrapper, NavbarTab } from "../styles";
 import data from "../data/PageData"
 
-export default function NavigationBar({ showInfo, setShowInfo, pathname, navShown }) {
+export default function MiniNavigationBar({ scrollTop }) {
     const navigate = useNavigate()
     const location = useLocation()
 
@@ -24,7 +22,7 @@ export default function NavigationBar({ showInfo, setShowInfo, pathname, navShow
                     navigate(item.path)
                 }}
                 animate={{
-                    opacity: 1,
+                    opacity: scrollTop >= 300 ? 1 : 0,
                     color: location.pathname === item.path ? "#FF9900" : "#FFFFFF"
                 }}
             >
@@ -32,18 +30,21 @@ export default function NavigationBar({ showInfo, setShowInfo, pathname, navShow
             </NavbarTab>
         )
     })
-
     return (
-        <NavbarWrapper
+        <MiniNavBarWrapper
             initial={{
                 opacity: 0,
+                width: "0px"
             }}
             animate={{
-                opacity: 1
+                opacity: scrollTop >= 500 ? 1 : 0,
+                width: scrollTop >= 500 ? "100%" : "0px",
+                height: scrollTop >= 500 ? "50px" : "0px"
+
             }}
-            transition={{ ease: "easeIn", duration: 0.2 }}
+            transition={{ ease: "easeIn", duration: 0.15 }}
         >
-            {tab}
-        </NavbarWrapper>
+           {tab}
+        </MiniNavBarWrapper>
     )
 }

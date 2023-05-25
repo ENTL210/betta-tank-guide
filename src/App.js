@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import background from "./images/background.png"
 import { Routes, Route, useNavigate, useLocation, Navigate } from "react-router-dom";
-import { Attribution, Container, Footer, Hyperlink, PageContainer, PageWrapper, Wrapper, ScrollToTopBtn} from "./styles"
+import { Attribution, Container, Footer, Hyperlink, PageContainer, PageWrapper, Wrapper} from "./styles"
 import NavigationBar from "./components/NavigationBar";
 import Care from "./components/Care";
 import Environment from "./components/Environment";
@@ -10,6 +10,7 @@ import Mates from "./components/Mates";
 import Plants from "./components/Plants";
 import Home from "./components/Home";
 import { color } from "framer-motion";
+import MiniNavigationBar from "./components/MiniNavigationBar";
 
 export default function App() {
     const navigate = useNavigate()
@@ -38,28 +39,8 @@ export default function App() {
 
                 <NavigationBar pathname={location.pathname}/>
                 
-                {scrollTop >= 120 && 
-                    <ScrollToTopBtn
-                        initial={{
-                            opacity: 0,
-                        }}
-                        animate={{
-                            opacity: scrollTop >= 120 ? 1 : 0
-                            
-                        }}
-                        transition={{ease: "easeIn", duration: 0.5}}
-                        whileHover={{
-                            color: "#FF9900"
-                        }}
-                        onClick={() => {
-                            document.body.scrollTo({
-                                top: 0,
-                                behavior: "smooth"
-                            })
-                        }}
-                    >
-                        ↑
-                    </ScrollToTopBtn>
+                {scrollTop >= 500 && 
+                    <MiniNavigationBar scrollTop={scrollTop}/>
                 }
 
                 <PageWrapper

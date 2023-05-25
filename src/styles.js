@@ -40,7 +40,7 @@ const NavbarTab = styled(motion.button)`
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;
-font-size: max(12px, 1.6vw);
+font-size: max(12px, 1.5vw);
 color: #FFFF;
 text-decoration: none;
 background: none;
@@ -211,23 +211,21 @@ max-width: 50ch;
 margin-top: -15px;
 `
 
-const ScrollToTopBtn = styled(motion.button)`
-position: sticky;
+const MiniNavBarWrapper = styled(motion.div)`
+position: sticky; 
 bottom: 15px;
 left: 95%;
-width: 50px;
-height: 50px;
-background: rgb(77,77,77, 0.80);
-color: white;
-border: none;
-padding: 0;
-font: inherit;
-cursor: pointer;
-outline: inherit;
-font-size: 40px;
-border-radius: 60px;
+width: 0px;
+heihgt: 0px;
+background-color: rgb(77,77,77, 0.80);
+border-radius: 20px;
+padding: 5px;
+margin: 36px;
+display: flex;
+align-items: center; 
+justify-content: space-evenly;
+user-select: none;
 `
-
 
 
 export {
@@ -253,5 +251,5 @@ export {
     Footer,
     Header,
     HeaderAuthor,
-    ScrollToTopBtn,
+    MiniNavBarWrapper
 }
