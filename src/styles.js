@@ -99,14 +99,13 @@ font-style: normal;
 font-weight: 1000;
 font-size: max(45px, 3vw);
 line-height: 1.2;
-color: ${props => props.color || "#FFFFFF"};
-margin: ${props => props.margin || ""}
+color: #FFFFFF;
 letter-spacing: 1px;
 `
 
 const Line = styled.hr`
 width: ${props => props.size};
-border: 1px solid ${props => props.color || "#FFFFFF"};
+border: 1px solid #FFFFFF;
 margin: -10px 0px;
 `
 
@@ -124,16 +123,16 @@ font-styled: normal;
 font-weight: 600;
 font-size: max(30px, 1.5vw);
 line-height: 1.3;
-color: ${props => props.color || "#FFFFFF"};
+color: #FFFFFF;
 letter-spacing: 1px;
 `
 
 const Paragraph = styled.p`
-color: ${props => props.color || "#FFFFFF"};
+color: #FFFFFF;
 font-family: 'Poppins';
 font-styled: normal;
 font-weight: 400;
-font-size: clamp( 10px, 5vw, 18px)   ;
+font-size: clamp( 10px, 5vw, 18px);
 max-width: 50ch;
 line-height: 1.4;
 text-align: leading;
@@ -177,7 +176,7 @@ font-styled: normal;
 font-weight: 600;
 font-size: max(18px, 1.4vw);
 line-height: 1.3;
-color: ${props => props.color || "#FFFFFF"};
+color: #FFFFFF;
 letter-spacing: 1px;
 `
 

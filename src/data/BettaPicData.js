@@ -1,6 +1,6 @@
 export default [
     {
-        id: 2,
+        id: 1,
         image: require("../images/betta-pic3.jpg"),
         attribution: [
             {
@@ -12,7 +12,7 @@ export default [
         ]
     },
     {
-        id: 3,
+        id: 2,
         image: require("../images/betta-pic4.jpg"),
         attribution: [
             {
@@ -24,7 +24,7 @@ export default [
         ]
     },
     {
-        id: 4,
+        id: 3,
         image: require("../images/betta-pic5.jpg"),
         attribution: [
             {
