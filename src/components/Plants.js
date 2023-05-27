@@ -9,6 +9,7 @@ import data from "../data/PlantsData.js"
 import PlantCard from "./PlantsCard";
 
 export default function Plants() {
+    // Fetch all the images and informations about the images from MatesData.js and map them...
     const Card = data.map(item => {
         return <PlantCard
             key={item.id}
@@ -17,9 +18,11 @@ export default function Plants() {
     })
     return (
         <PageContainer
+            /* initially, when the component is mount, the opacity is 0*/
             initial={{
                 opacity: 0,
             }}
+            /* when fully load, the opacity will become one, else be zero*/
             animate={{
                 opacity: 1,
             }}

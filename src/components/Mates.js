@@ -4,6 +4,7 @@ import MatesCard from "./MatesCard";
 import data from "../data/MatesData";
 
 export default function Mates() {
+    // Fetch all the images and informations about the images from MatesData.js and map them...
     const Card = data.map(item => {
         return <MatesCard
             key={item.id}
@@ -12,9 +13,11 @@ export default function Mates() {
     })
     return (
         <PageContainer
+            /* initially, when the component is mount, the opacity is 0*/
             initial={{
                 opacity: 0,
             }}
+            /* when fully load, the opacity will become one, else be zero*/
             animate={{
                 opacity: 1,
             }}

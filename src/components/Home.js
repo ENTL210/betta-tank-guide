@@ -5,8 +5,9 @@ import BettaPicData from "../data/BettaPicData";
 import BettaPicCard from "./BettaPicCard";
 
 export default function Home() {
+    // Fetch all the images and informations about the images from BettaPicData.js and map them...
     const PicCard = BettaPicData.map(item => {
-        return <BettaPicCard 
+        return <BettaPicCard
             key={item.id}
             {...item}
         />
@@ -14,11 +15,13 @@ export default function Home() {
 
     return (
         <PageContainer
+            /* initially, when the component is mount, the opacity is 0*/
             initial={{
-                opacity: 0
+                opacity: 0,
             }}
+            /* when fully load, the opacity will become one, else be zero*/
             animate={{
-                opacity: 1
+                opacity: 1,
             }}
 
             transition={{ ease: "easeIn", duration: 0.5 }}
@@ -28,7 +31,7 @@ export default function Home() {
                 <HeaderAuthor>Edward Lam</HeaderAuthor>
             </Header>
 
-            <Line size={"75px"}/>
+            <Line size={"75px"} />
 
             <ContentWrapper>
                 <H2>Introduction</H2>

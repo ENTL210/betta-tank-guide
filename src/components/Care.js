@@ -6,9 +6,11 @@ export default function Care() {
     const location = useLocation()
     return (
         <PageContainer
+            /* initially, when the component is mount, the opacity is 0*/
             initial={{
                 opacity: 0,
             }}
+            /* when fully load, the opacity will become one, else be zero*/
             animate={{
                 opacity: 1,
             }}
@@ -36,7 +38,7 @@ export default function Care() {
                 </Paragraph>
 
                 <Attribution>
-                    From <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://www.petlandtexas.com/10-key-tips-to-keeping-a-healthy-aquarium/">Pet Land Texas</Hyperlink> 
+                    From <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://www.petlandtexas.com/10-key-tips-to-keeping-a-healthy-aquarium/">Pet Land Texas</Hyperlink>
                 </Attribution>
 
                 <H2>Cycle the Tank before Adding Fishes</H2>
@@ -53,7 +55,7 @@ export default function Care() {
                 </Paragraph>
 
                 <Attribution>
-                    From <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://pethelpful.com/fish-aquariums/How-to-Care-for-a-Fish-Tank-Aquarium-Maintenance-Tips">Pet Helpful</Hyperlink> 
+                    From <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://pethelpful.com/fish-aquariums/How-to-Care-for-a-Fish-Tank-Aquarium-Maintenance-Tips">Pet Helpful</Hyperlink>
                 </Attribution>
 
                 <H2>Perform Water Changes</H2>
@@ -78,9 +80,9 @@ export default function Care() {
                         in your tank
                     </ListItem>
                     <ListItem>
-                        Lay a plastic bag that big enough to fit 60% 
-                        of the area of the fish tank in the fish tank 
-                        so when you add water into the tank, it will not 
+                        Lay a plastic bag that big enough to fit 60%
+                        of the area of the fish tank in the fish tank
+                        so when you add water into the tank, it will not
                         corrupt the subtrate and stress out the fish much.
                     </ListItem>
                     <ListItem>
@@ -88,8 +90,8 @@ export default function Care() {
                     </ListItem>
                     <ListItem>Fill the bucket with the amount of water you need to add back to the tank</ListItem>
                     <ListItem>
-                        Follow the instructions of the suppplements that you bought, 
-                        and add them to the water in the bucket to remove chlorine, 
+                        Follow the instructions of the suppplements that you bought,
+                        and add them to the water in the bucket to remove chlorine,
                         chlorimates, and other subtances.
                     </ListItem>
                     <ListItem>Wait 2-3 minutes, for the supplements to balance out and condition the water</ListItem>
@@ -97,7 +99,7 @@ export default function Care() {
                 </OrderList>
 
                 <Attribution>
-                    From <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://interpet.co.uk/support/we-can-help-you-with/cleaning-care/doing-an-easy-water-change-general-cleaning/">Interpret</Hyperlink> 
+                    From <Hyperlink color={"gray"} whileHover={{ color: "#FF9900" }} transition={{ ease: "easeIn", duration: 0.5 }} href="https://interpet.co.uk/support/we-can-help-you-with/cleaning-care/doing-an-easy-water-change-general-cleaning/">Interpret</Hyperlink>
                 </Attribution>
 
 

@@ -110,7 +110,7 @@ border: 1px solid ${props => props.color || "#FFFFFF"};
 margin: -10px 0px;
 `
 
-const ContentWrapper = styled.div`
+const ContentWrapper = styled.section`
 display: flex;
 flex-direction: column;
 align-items: flex-start;
@@ -185,20 +185,22 @@ const OrderList = styled.ol`
 
 `
 
+const UnorderedList = styled.ul`
+
+`
+
 const ListItem = styled.li`
 color: ${props => props.color || "#FFFFFF"};
 font-family: 'Poppins';
 font-styled: normal;
 font-weight: 400;
-font-size: clamp( 10px, 5vw, 18px)   ;
+font-size: clamp( 10px, 5vw, 18px);
 max-width: 50ch;
 line-height: 1.4;
 padding: 10px 2px;
 `
 
-const UnorderedList = styled.ul`
 
-`
 
 const Footer = styled.footer`
 grid-row: -1 / -1;
@@ -222,7 +224,7 @@ color: ${props => props.color || "#FFFFFF"};
 font-family: 'Poppins';
 font-styled: normal;
 font-weight: 400;
-font-size: clamp( 10px, 5vw, 18px)   ;
+font-size: clamp( 10px, 5vw, 18px);
 max-width: 50ch;
 margin-top: -15px;
 `

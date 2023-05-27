@@ -17,11 +17,13 @@ export default function App() {
     const location = useLocation()
     const [scrollTop, setScrollTop] = useState(0)
 
+    // Retrieve the distance from the top of the page...
     const handleScrolling = () => {
         const position = document.body.scrollTop;
         setScrollTop(position);
     }
 
+    // listen to action of scroll and run the handleScrolling()...
     document.body.addEventListener('scroll', handleScrolling);
 
     return (
@@ -36,26 +38,35 @@ export default function App() {
             <Wrapper
                 transition={{ ease: "easeIn", duration: 0.5 }}
             >
-
+                
+                {/* NavigationBar Component*/}
                 <NavigationBar pathname={location.pathname} />
 
+                {/* When the distance from the current location to the top > 500, and window's 
+                width > 910, a mini navigation bar will appear...*/}
                 {scrollTop >= 500 && window.innerWidth > 910 &&
                     <MiniNavigationBar scrollTop={scrollTop} />
                 }
 
+                {/* When the distance from the current location to the top > 500, and window's 
+                width < 910, a scroll to top btn will appear...*/}
                 {scrollTop >= 500 && window.innerWidth < 910 &&
                     <ScrollToTopBtn
+                        /* initially, when the component is mount, the opacity is 0*/
                         initial={{
                             opacity: 0,
                         }}
+                        /* when scrollTop >= 150, the opacity will become one, else be zero*/
                         animate={{
                             opacity: scrollTop >= 150 ? 1 : 0
 
                         }}
                         transition={{ ease: "easeIn", duration: 0.5 }}
+                        /* Change color to #FF9900 when hover over the component*/
                         whileHover={{
                             color: "#FF9900"
                         }}
+                        /* scroll to the top of the page when click on...*/
                         onClick={() => {
                             document.body.scrollTo({
                                 top: 0,
@@ -68,13 +79,14 @@ export default function App() {
                 }
 
                 <PageWrapper
+                    /* initially, when the component is mount, the opacity is 0*/
                     initial={{
                         opacity: 0
                     }}
+                    /* After the component is fully mount, the opacity will be 1*/ 
                     animate={{
                         opacity: 1,
                     }}
-                    scrollTop={scrollTop}
 
                     transition={{ ease: "easeIn", duration: 0.5 }}
                 >

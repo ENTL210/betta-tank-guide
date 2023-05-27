@@ -11,19 +11,21 @@ export default function Environment() {
 
     return (
         <PageContainer
+            /* initially, when the component is mount, the opacity is 0*/
             initial={{
-                opacity: 0
+                opacity: 0,
             }}
+            /* when fully load, the opacity will become one, else be zero*/
             animate={{
-                opacity: 1
+                opacity: 1,
             }}
 
             transition={{ ease: "easeIn", duration: 0.5 }}
         >
             <H1 >Environment</H1>
 
-            <Line size={"75px"}/>
-            
+            <Line size={"75px"} />
+
             <ContentWrapper>
                 <H2>Betta's Natural Environment</H2>
                 <ImageWrapper>
